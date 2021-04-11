@@ -27,16 +27,14 @@ body{
 }
 .navbar{
     background-color: #FFDEAD;
+    filter: brightness(100%);
     position: sticky;
+    align-items: center;
     top: 0;
-    display: flex;
-    justify-content: center;
 }
-/* Style the navigation bar links */
 .navbar .nav-link{
     display: inline-flex;
     justify-content: space-around;
-    align-items: center;
     color: #626C66;
     padding: 14px 20px;
     text-decoration: none;
@@ -106,7 +104,6 @@ body{
     text-align: center;
     font-family: arial;
 }
-
 #seccionNos .title {
     color: grey;
     font-size: 18px;
@@ -132,12 +129,27 @@ body{
     opacity: 0.7;
 }
 /* Tienda de productos */
+#tiendaProds{
+    background-image: url('Multimedia/foto\ esencias\ 3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#tiendaProds .imagen_prods:hover {
+    -ms-transform: scale(1.3); /* IE 9 */
+    -webkit-transform: scale(1.3); /* Safari 3-8 */
+    transform: scale(1.3); 
+} 
 #tiendaProds .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     margin: auto;
     text-align: center;
     font-family: arial;
+}
+.box_texto_prods {
+    background-color: #aaa;
 }
 #tiendaProds .price {
     color: grey;
@@ -184,10 +196,21 @@ body{
     background-color: #f2f2f2;
     padding: 20px;
 }
+.box_titulos_pags{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    background-color: #aaa;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    padding: 5px 0px 5px 0px;
+}
 /* Footer */
 footer{    
     background-color: #FFDEAD;
-    height: 60px;
+    height: 80px;
     width: 100%;
     display: flexbox;
     justify-content: center;
@@ -195,6 +218,8 @@ footer{
     text-align: center;
     width: 100%;
     margin-bottom: 0px;
+    position: static;
+    bottom: 0;
 }
 footer li{
     text-decoration: none;
@@ -207,13 +232,12 @@ footer li{
         flex-direction: column;
     }
 }
-
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
-    #contenedorNav .navbar .nav-link {
+    #contenedorNav .navbar,.nav-link {
         float: none;
         width: 100%;
-        display: flexbox;
+        display: flex;
         justify-content: space-around;
     }
     #tiendaProds .row{
@@ -227,7 +251,6 @@ footer li{
     #contenedorNav .navbar,.nav-link {
         float: none;
         width: 100%;
-        
     }
     .row {   
         flex-direction: column;
