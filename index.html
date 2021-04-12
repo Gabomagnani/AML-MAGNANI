@@ -22,11 +22,13 @@
     </header>
     <!-- Barra de navegacion -->
     <section id="contenedorNav">
-        <div class="navbar">
-            <a class="nav-link" href="index.html">Inicio</a>
-            <a class="nav-link" href="quienessomos.html">Quienes Somos</a>
-            <a class="nav-link" href="productos.html">Tienda</a>
-            <a class="nav-link" href="contacto.html">Contacto</a>
+        <div class="box_nav">
+            <div class="navbar">
+                <a class="nav-link" href="index.html">Inicio</a>
+                <a class="nav-link" href="quienessomos.html">Quienes Somos</a>
+                <a class="nav-link" href="productos.html">Tienda</a>
+                <a class="nav-link" href="contacto.html">Contacto</a>
+            </div>
         </div>
     </section>
     <div class="row">
@@ -42,17 +44,46 @@
         </div>
         <div id="backgroundDos">
             <div class="main">
-                <h2>TITLE HEADING</h2>
-                <h5>Title description, Dec 7, 2017</h5>
-                <div class="fakeimg" style="height:200px;">Image</div>
-                <p>Some text..</p>
-                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                <br>
-                <h2>TITLE HEADING</h2>
-                <h5>Title description, Sep 2, 2017</h5>
-                <div class="fakeimg" style="height:200px;">Image</div>
-                <p>Some text..</p>
-                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                <h2 style="text-align:center">GALERIA DE FOTOS</h2>
+                <div class="box_slider">
+                    <div class="container">
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 4</div>
+                            <img id="imagenGdeCarrusel" src="Multimedia/me canse de cortart la naranja.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 4</div>
+                            <img id="imagenGdeCarrusel" src="Multimedia/Probamos con la rosa pa .jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 4</div>
+                            <img id="imagenGdeCarrusel" src="Multimedia/Esencia Violeta 55555.jpg" style="width:100%">
+                        </div>
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 4</div>
+                            <img id="imagenGdeCarrusel" src="Multimedia/Sales de Baño Armonizadoras Nuevo Envase (2).jpg" style="width:100%"> 
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>                   
+                        <div class="caption-container">                        
+                            <p id="caption"></p>
+                        </div>
+                        <div class="row">
+                            <div class="column">
+                                <img id="imagenCarrusel" class="demo cursor" src="Multimedia/me canse de cortart la naranja.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+                            </div>
+                            <div class="column">
+                                <img id="imagenCarrusel" class="demo cursor" src="Multimedia/Probamos con la rosa pa .jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+                            </div>
+                            <div class="column">
+                                <img id="imagenCarrusel" class="demo cursor" src="Multimedia/Esencia Violeta 55555.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                            </div>
+                            <div class="column">              
+                                <img id="imagenCarrusel" class="demo cursor" src="Multimedia/Sales de Baño Armonizadoras Nuevo Envase (2).jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

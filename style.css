@@ -36,9 +36,14 @@ body{
 .navbar .nav-link{
     display: inline-flex;
     justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
     color: #626C66;
     padding: 14px 20px;
     text-decoration: none;
+}
+.box_nav{
+    text-align: center;
 }
 /* Change color on hover */
 .navbar .nav-link:hover {
@@ -74,6 +79,7 @@ body{
 }
 #backgroundUno #boxPpal h2{
     font-size: 2.5rem;
+    text-align: center;
     padding-bottom: 40px;
     padding-left: 20px;
     font-weight: bold;
@@ -83,14 +89,105 @@ body{
     padding-right: 20px;
     padding-left: 20px;
 }
-/* Box Dos */
+/* BOX DOS */
 #backgroundDos,.main {     
     -ms-flex: 100%; /* IE10 */
     flex: 100%;
     background-color: #CFBCDF;
     padding: 20px;
 }
-
+/* Incluyendo Carrusel */
+.box_slider {
+    display: flexbox;
+    text-align: center;
+    padding-left: 12rem;
+    padding-right: 12rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+#imagenCarrusel {
+    vertical-align: middle;
+    height: 150px;
+    width: 150px;
+}
+#imagenGdeCarrusel {
+    vertical-align: middle;
+    height: 350px;
+    width: 350px;
+}
+.container {
+    position: relative;
+}
+  /* Hide the images by default */
+.mySlides {
+    display: none;
+}
+.cursor {
+    cursor: pointer;
+}
+  /* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+  /* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+  /* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+  /* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+  /* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  /* Six columns side by side */
+.column {
+    float: left;
+    width: 24.96%;
+}
+  /* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+.active,
+.demo:hover {
+    opacity: 1;
+}
 /* Fake image, just for this example */
 .fakeimg {
     background-color: #aaa;
@@ -138,8 +235,8 @@ body{
 }
 
 #tiendaProds .imagen_prods:hover {
-    -ms-transform: scale(1.3); /* IE 9 */
-    -webkit-transform: scale(1.3); /* Safari 3-8 */
+    -ms-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
     transform: scale(1.3); 
 } 
 #tiendaProds .card {
@@ -151,6 +248,9 @@ body{
 }
 .box_texto_prods {
     background-color: #aaa;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
 }
 #tiendaProds .price {
     color: grey;
