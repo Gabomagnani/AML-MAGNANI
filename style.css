@@ -28,9 +28,10 @@ body{
 .navbar{
     background-color: #FFDEAD;
     filter: brightness(100%);
-    position: sticky;
+    position:sticky;
     align-items: center;
     top: 0;
+    width: 100%;
 }
 .navbar .nav-link{
     display: inline-flex;
