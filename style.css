@@ -70,7 +70,7 @@ body{
 }
 #backgroundUno #boxPpal{
     width: 100%;
-    height: 350px;
+    height: auto;
     font-family: 'Noto Sans TC', sans-serif;
     background-color: #aaa;
     display: inline-flexbox;
@@ -86,15 +86,32 @@ body{
 }
 #backgroundUno #boxPpal h5{
     font-size: 1.5rem;
+    text-align: center;
     padding-right: 20px;
     padding-left: 20px;
 }
 /* BOX DOS */
-#backgroundDos,.main {     
+#backgroundDos, .main {   
     -ms-flex: 100%; /* IE10 */
     flex: 100%;
-    background-color: #CFBCDF;
     padding: 20px;
+    background-color: #CFBCDF;
+}
+#backgroundDos #boxSec{  
+    width: 100%;
+    height: auto;
+    background-color: #aaa;
+    font-family: 'Noto Sans TC', sans-serif;
+    border-radius: 15px;
+    display: inline-flexbox;
+    justify-content: left;
+}
+#backgroundDos #boxSec h2{
+    font-size: 2.5rem;
+    text-align: center;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    font-weight: bold;
 }
 /* Incluyendo Carrusel */
 .box_slider {
@@ -102,8 +119,8 @@ body{
     text-align: center;
     padding-left: 12rem;
     padding-right: 12rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 80px;
+    margin-right: 80px;
 }
 #imagenCarrusel {
     vertical-align: middle;
@@ -126,8 +143,7 @@ body{
     cursor: pointer;
 }
   /* Next & previous buttons */
-.prev,
-.next {
+.prev, .next {
     cursor: pointer;
     position: absolute;
     top: 40%;
@@ -184,8 +200,7 @@ body{
 .demo {
     opacity: 0.6;
 }
-.active,
-.demo:hover {
+.active, .demo:hover {
     opacity: 1;
 }
 /* Fake image, just for this example */
@@ -194,7 +209,40 @@ body{
     width: 100%;
     padding: 20px;
 }
+/* Box Servicios */
+#seccionServ, .main {   
+    -ms-flex: 100%; /* IE10 */
+    flex: 100%;
+    padding: 20px;
+    background-color: #CFBCDF;
+}
+#seccionServ #boxServ{  
+    width: 100%;
+    height: auto;
+    background-color: #aaa;
+    font-family: 'Noto Sans TC', sans-serif;
+    border-radius: 15px;
+    display: inline-flexbox;
+    justify-content: center;
+}
+#seccionServ #boxServ h2{
+    font-size: 2.5rem;
+    text-align: center;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    font-weight: bold;
+}
+#seccionServ #boxServ p{
+    font-size: 1.5rem;
+    text-align: center;
+}
 /* Quienes somos */
+#seccionNos {
+    background-image: url('Multimedia/foto\ esencias\ 3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 #seccionNos .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
@@ -218,6 +266,9 @@ body{
     width: 100%;
     font-size: 18px;
 }
+#seccionNos button a{
+    color: white;
+}
 #seccionNos a {
     text-decoration: none;
     font-size: 22px;
@@ -225,6 +276,13 @@ body{
 }
 #seccionNos button:hover, a:hover {
     opacity: 0.7;
+}
+.boxContCardAna{
+    display: flex;
+    flex-wrap: wrap;
+}
+.back-content-card{
+    background-color: thistle;
 }
 /* Tienda de productos */
 #tiendaProds{
@@ -298,7 +356,8 @@ body{
     background-color: #f2f2f2;
     padding: 20px;
 }
-.box_titulos_pags{
+/* Extras */
+.box_titulos_pags {
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 2rem;
     text-align: center;
@@ -320,41 +379,37 @@ footer{
     text-align: center;
     width: 100%;
     margin-bottom: 0px;
-    position: static;
+    position: relative;
     bottom: 0;
 }
 footer li{
     text-decoration: none;
     list-style-type: none;
 }
+footer a {
+    color: black;
+}
+
 /* Medias Queries */
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-    .row {   
-        flex-direction: column;
+/* Screen 1200px */
+@media screen and (max-width: 1200px) {
+
+}
+
+/* Screen 1024px */
+@media screen and (max-width: 1024px) {
+    #backgroundDos #boxSec {
+        display: none;
     }
 }
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-    #contenedorNav .navbar,.nav-link {
-        float: none;
-        width: 100%;
+/* Screen 768px */
+@media screen and (max-width: 768px) {
+    #contenedorNav .navbar .nav-link {
         display: flex;
-        justify-content: space-around;
+        justify-items: center;
     }
-    #tiendaProds .row{
-        flex-direction: column;
-    }
-    .row{
-        flex-direction: column;
-        }
-}
-@media only screen and (max-width: 768px) {
-    #contenedorNav .navbar,.nav-link {
-        float: none;
-        width: 100%;
-    }
-    .row {   
+    .row {  
+        display: flex;
         flex-direction: column;
     }
     #tiendaProds .row{
@@ -364,9 +419,53 @@ footer li{
         font-size: 2rem;
     }
     #backgroundUno #boxPpal h5{
-        font-size: 1rem;
+        font-size: 1,1rem;
     }
     #backgroundUno #boxPpal {
-        height: 500px;
+        height: auto;
+    } 
+    .box_slider{
+        display: none;
+    }
+    #backgroundDos #boxSec {
+        display: none;
+    }
+    .header h1 {
+        font-size: 34px;
+    }
+}
+/* Screen 400px */
+@media screen and (max-width: 400px) {
+    /* Contenedor nav  */
+    #contenedorNav .navbar .nav-link {
+        float: none;
+        width: 100%;
+    }
+    /* Carrito de compras */
+    #tiendaProds .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: center;
+    }
+    .row{
+        flex-direction: column;
+        }
+    /* Pagina Principal */
+    #backgroundDos #boxSec {
+        display: none;
+    }
+    .box_texto_prods{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .header h1 {
+        font-size: 32px;
+    }
+}
+/* Screen 320px */
+@media screen and (max-width: 400px)  {
+    .header h1 {
+        font-size: 30px;
     }
 }

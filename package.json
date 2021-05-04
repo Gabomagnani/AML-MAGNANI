@@ -1,0 +1,19 @@
+{
+  "name": "proyectaml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Funciones.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gabomagnani/AML-MAGNANI.git"
+  },
+  "author": "Gabriel Magnani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gabomagnani/AML-MAGNANI/issues"
+  },
+  "homepage": "https://github.com/Gabomagnani/AML-MAGNANI#readme"
+}
