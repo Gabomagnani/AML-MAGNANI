@@ -362,7 +362,7 @@ body{
     font-size: 2rem;
     text-align: center;
     width: 100%;
-    height: 80px;
+    height: auto;
     background-color: #aaa;
     margin-bottom: 20px;
     border-radius: 12px;
@@ -469,6 +469,6 @@ footer a {
         font-size: 30px;
     }
     #tiendaProds .box_titulos_pags h2 {
-    font-size: 13px;
+    font-size: 16px;
     }
 }
